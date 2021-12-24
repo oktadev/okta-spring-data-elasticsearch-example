@@ -3,8 +3,6 @@
 This repository contains all the code for the Spring Data Elasticsearch tutorial, illustrating the JHipster support for the Elasticsearch engine in Spring Boot applications.
 
 **Prerequisites**:
-- [HTTPie](https://httpie.io/)
-- [JHipster 7](https://www.jhipster.tech/installation/)
 - [Java 14+](https://openjdk.java.net/install/index.html)
 - [Okta CLI](https://cli.okta.com)
 - [Docker](https://docs.docker.com/engine/install/)
@@ -39,7 +37,6 @@ okta apps create jhipster
 You will be prompted to select the following options:
 
 - Application name: gateway
-- Type of Application: JHipster
 - Redirect URI: Default
 - Post Logout Redirect URI: Default
 
@@ -57,7 +54,7 @@ The OktaCLI will create the client application and configure the issuer, clientI
 In the `blog` and `gateway` root, generate the application container image with the following Maven command:
 
 ```shell
-./mvnw spring-boot:build-image
+./mvnw -DskipTests -ntp -Pprod verify jib:dockerBuild
 ```
 
 Add the file `docker-compose/central-server-config/blog-prod.yml` with the following content:
