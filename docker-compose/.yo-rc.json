@@ -1,0 +1,13 @@
+{
+  "generator-jhipster": {
+    "appsFolders": ["gateway", "blog"],
+    "directoryPath": "../",
+    "gatewayType": "SpringCloudGateway",
+    "clusteredDbApps": [],
+    "monitoring": "no",
+    "serviceDiscoveryType": "eureka",
+    "deploymentType": "docker-compose",
+    "dockerRepositoryName": "jgarbarino",
+    "jwtSecretKey": "MTIzODMyNjc2YzM3MDMwNDE4NDhhMmQ1YjFlNzc5ZTAxMWFhMDY2Mjc4MjU4ZGM4MGEzYTMyZTcyMjhkNzQwNjk5Yzg2MjcyZDc3YjYwMDVmMjllY2QzM2U0NDI3Yjc2OGQyNg=="
+  }
+}
