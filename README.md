@@ -30,7 +30,7 @@ okta register
 Provide the required information. Once you complete the registration, create the OIDC client applications.
 
 ```shell
-cd gateway
+cd spring-data-elasticsearch
 okta apps create jhipster
 ```
 
