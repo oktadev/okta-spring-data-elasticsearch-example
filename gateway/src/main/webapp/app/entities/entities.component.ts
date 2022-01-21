@@ -1,5 +1,6 @@
 import { Component, Provide, Vue } from 'vue-property-decorator';
 
+import UserService from '@/entities/user/user.service';
 import PostService from './blog/post/post.service';
 import BlogService from './blog/blog/blog.service';
 import TagService from './blog/tag/tag.service';
@@ -7,6 +8,7 @@ import TagService from './blog/tag/tag.service';
 
 @Component
 export default class Entities extends Vue {
+  @Provide('userService') private userService = () => new UserService();
   @Provide('postService') private postService = () => new PostService();
   @Provide('blogService') private blogService = () => new BlogService();
   @Provide('tagService') private tagService = () => new TagService();

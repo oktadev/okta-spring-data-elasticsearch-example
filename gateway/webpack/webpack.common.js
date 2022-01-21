@@ -47,18 +47,7 @@ module.exports = async (env, options) => {
         port: 9060,
         proxy: [
           {
-            context: [
-              '/api',
-              '/services',
-              '/management',
-              '/swagger-resources',
-              '/v2/api-docs',
-              '/v3/api-docs',
-              '/h2-console',
-              '/oauth2',
-              '/login',
-              '/auth',
-            ],
+            context: ['/api', '/services', '/management', '/v3/api-docs', '/h2-console', '/oauth2', '/login', '/auth'],
             target: 'http://localhost:8080',
             secure: false,
           },

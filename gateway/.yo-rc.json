@@ -27,7 +27,7 @@
     "packageName": "com.okta.developer.gateway",
     "packageFolder": "com/okta/developer/gateway",
     "applicationType": "gateway",
-    "jhipsterVersion": "7.4.0",
+    "jhipsterVersion": "7.5.0",
     "clientPackageManager": "npm",
     "dtoSuffix": "DTO",
     "entitySuffix": "",
@@ -46,10 +46,10 @@
     "otherModules": [],
     "pages": [],
     "nativeLanguage": "en",
-    "creationTimestamp": 1638828480085,
-    "jwtSecretKey": "Zjg3NDExZjRhYTFjMGNmNzU3Yzk3MjYwNjI1ZjA3YThlYTMwNWZiMmE5ZjgwOTI5NGYyZjAwYjg0MThhNzIxODE2YmUwODBhMTJjNTUyNGRjZTM3NWVhMTAzNTRjZDY5MDU4NTU1NjMzMGNiYWVmZGRjZjE0YjRmNTk0Yzg3YjY=",
+    "creationTimestamp": 1642646286998,
+    "jwtSecretKey": "ZmY1ZDNhMDg0OGYwOTMxNmY5OTIzN2JmMmE4N2E2NmM5MTc1MmQwZDdiMDM1MTk4NDA5YjI2ZmQ3MGU3NjlkNzU1NzlmOTcyMzc3MmI5NTQzMDU1ODY1ZWIwMTk0MTUxYmM4OWJmNjEwYzVlZjliNzY4MmQzMTBkODcwNjc0Yzg=",
     "devServerPort": 9060,
     "entities": ["Post", "Blog", "Tag"],
-    "lastLiquibaseTimestamp": 1638828660000
+    "lastLiquibaseTimestamp": 1642646466000
   }
 }

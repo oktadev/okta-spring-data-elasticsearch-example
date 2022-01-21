@@ -8,6 +8,6 @@
     "serviceDiscoveryType": "eureka",
     "deploymentType": "docker-compose",
     "dockerRepositoryName": "jgarbarino",
-    "jwtSecretKey": "MTIzODMyNjc2YzM3MDMwNDE4NDhhMmQ1YjFlNzc5ZTAxMWFhMDY2Mjc4MjU4ZGM4MGEzYTMyZTcyMjhkNzQwNjk5Yzg2MjcyZDc3YjYwMDVmMjllY2QzM2U0NDI3Yjc2OGQyNg=="
+    "jwtSecretKey": "OTEwODI0NzFkM2M4OGQyMmQzMDMxNGQyZjJmNzBjOGRjYWIzZjZjZWI4NTY2NGFhMDM5N2UwYWI4OTEwOGU3ZDU5YzcwZjc3NjhhODdjOWMzNGUyZWEzZjliN2M0OTMxNGM3OA=="
   }
 }

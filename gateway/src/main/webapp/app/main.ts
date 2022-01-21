@@ -24,8 +24,6 @@ import '../content/scss/vendor.scss';
 import TranslationService from '@/locale/translation.service';
 
 import GatewayService from '@/admin/gateway/gateway.service';
-
-import UserOAuth2Service from '@/entities/user/user.oauth2.service';
 /* tslint:disable */
 
 // jhipster-needle-add-entity-service-to-main-import - JHipster will import entities services here
@@ -81,7 +79,6 @@ new Vue({
     logsService: () => new LogsService(),
     metricsService: () => new MetricsService(),
 
-    userOAuth2Service: () => new UserOAuth2Service(),
     translationService: () => translationService,
     // jhipster-needle-add-entity-service-to-main - JHipster will import entities services here
     accountService: () => accountService,

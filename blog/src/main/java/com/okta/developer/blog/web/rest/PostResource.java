@@ -178,7 +178,7 @@ public class PostResource {
      */
     @GetMapping("/posts")
     public Mono<ResponseEntity<List<Post>>> getAllPosts(
-        Pageable pageable,
+        @org.springdoc.api.annotations.ParameterObject Pageable pageable,
         ServerHttpRequest request,
         @RequestParam(required = false, defaultValue = "false") boolean eagerload
     ) {
@@ -239,7 +239,11 @@ public class PostResource {
      * @return the result of the search.
      */
     @GetMapping("/_search/posts")
-    public Mono<ResponseEntity<Flux<Post>>> searchPosts(@RequestParam String query, Pageable pageable, ServerHttpRequest request) {
+    public Mono<ResponseEntity<Flux<Post>>> searchPosts(
+        @RequestParam String query,
+        @org.springdoc.api.annotations.ParameterObject Pageable pageable,
+        ServerHttpRequest request
+    ) {
         log.debug("REST request to search for a page of Posts for query {}", query);
         return postService
             .searchCount()

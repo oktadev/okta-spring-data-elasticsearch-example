@@ -9,7 +9,7 @@ import BlogUpdateComponent from '@/entities/blog/blog/blog-update.vue';
 import BlogClass from '@/entities/blog/blog/blog-update.component';
 import BlogService from '@/entities/blog/blog/blog.service';
 
-import UserOAuth2Service from '@/entities/user/user.oauth2.service';
+import UserService from '@/entities/user/user.service';
 import AlertService from '@/shared/alert/alert.service';
 
 const localVue = createLocalVue();
@@ -44,7 +44,7 @@ describe('Component Tests', () => {
           blogService: () => blogServiceStub,
           alertService: () => new AlertService(),
 
-          userOAuth2Service: () => new UserOAuth2Service(),
+          userService: () => new UserService(),
         },
       });
       comp = wrapper.vm;

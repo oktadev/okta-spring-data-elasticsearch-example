@@ -174,7 +174,10 @@ public class TagResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of tags in body.
      */
     @GetMapping("/tags")
-    public Mono<ResponseEntity<List<Tag>>> getAllTags(Pageable pageable, ServerHttpRequest request) {
+    public Mono<ResponseEntity<List<Tag>>> getAllTags(
+        @org.springdoc.api.annotations.ParameterObject Pageable pageable,
+        ServerHttpRequest request
+    ) {
         log.debug("REST request to get a page of Tags");
         return tagService
             .countAll()
@@ -232,7 +235,11 @@ public class TagResource {
      * @return the result of the search.
      */
     @GetMapping("/_search/tags")
-    public Mono<ResponseEntity<Flux<Tag>>> searchTags(@RequestParam String query, Pageable pageable, ServerHttpRequest request) {
+    public Mono<ResponseEntity<Flux<Tag>>> searchTags(
+        @RequestParam String query,
+        @org.springdoc.api.annotations.ParameterObject Pageable pageable,
+        ServerHttpRequest request
+    ) {
         log.debug("REST request to search for a page of Tags for query {}", query);
         return tagService
             .searchCount()

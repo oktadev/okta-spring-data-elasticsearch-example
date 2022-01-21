@@ -36,5 +36,5 @@
   "searchEngine": "elasticsearch",
   "clientRootFolder": "blog",
   "databaseType": "mongodb",
-  "changelogDate": "20211206221000"
+  "changelogDate": "20220120024006"
 }

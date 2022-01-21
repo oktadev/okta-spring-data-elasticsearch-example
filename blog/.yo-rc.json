@@ -25,7 +25,7 @@
     "packageName": "com.okta.developer.blog",
     "packageFolder": "com/okta/developer/blog",
     "applicationType": "microservice",
-    "jhipsterVersion": "7.4.0",
+    "jhipsterVersion": "7.5.0",
     "clientPackageManager": "npm",
     "dtoSuffix": "DTO",
     "entitySuffix": "",
@@ -38,10 +38,10 @@
     "otherModules": [],
     "pages": [],
     "nativeLanguage": "en",
-    "creationTimestamp": 1638828480086,
+    "creationTimestamp": 1642646286998,
     "withAdminUi": false,
-    "jwtSecretKey": "MDU4NjBlMjY0ODcxOWZiZDYwZTBlMTVmMDkwY2FiNmMyZGUyYjM3ZTZlZGIzZjY2MGFiNmU2YmNiMjRiNzA2YjVlYzQzZDJkY2JiNDM4MmQ4ZWMyNmVlMjhkYTMyNThjNWFhZWZmYzI0MDAwOTk2MmM0NDI5YjM1YzAxMjQ1ZTk=",
+    "jwtSecretKey": "Y2E5ZjE3MmQ4MDk0YTUwYWQ4YzZjMWE0MDI3MzUxMTZiN2U1NDRiODA0YjA4ZmQ1ODlhMTk2NTZhZjE4OWVmZWIxMmFlMTllZjMxOTRlYjMwYTkwZDViMDBlZWIwNmE2N2QzMzc4ZWRhYzJmNmJmODA2OTk1N2QwZWVmZWNlNWM=",
     "entities": ["Post", "Blog", "Tag"],
-    "lastLiquibaseTimestamp": 1638828660000
+    "lastLiquibaseTimestamp": 1642646466000
   }
 }

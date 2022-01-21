@@ -4,7 +4,7 @@ import { required, minLength } from 'vuelidate/lib/validators';
 
 import AlertService from '@/shared/alert/alert.service';
 
-import UserOAuth2Service from '@/entities/user/user.oauth2.service';
+import UserService from '@/entities/user/user.service';
 
 import { IBlog, Blog } from '@/shared/model/blog/blog.model';
 import BlogService from './blog.service';
@@ -31,7 +31,7 @@ export default class BlogUpdate extends Vue {
 
   public blog: IBlog = new Blog();
 
-  @Inject('userOAuth2Service') private userOAuth2Service: () => UserOAuth2Service;
+  @Inject('userService') private userService: () => UserService;
 
   public users: Array<any> = [];
   public isSaving = false;
@@ -115,7 +115,7 @@ export default class BlogUpdate extends Vue {
   }
 
   public initRelationships(): void {
-    this.userOAuth2Service()
+    this.userService()
       .retrieve()
       .then(res => {
         this.users = res.data;

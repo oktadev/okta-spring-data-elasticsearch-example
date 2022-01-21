@@ -3,7 +3,7 @@
 This repository contains all the code for the Spring Data Elasticsearch tutorial, illustrating the JHipster support for the Elasticsearch engine in Spring Boot applications.
 
 **Prerequisites**:
-- [Java 14+](https://openjdk.java.net/install/index.html)
+- [Java 11+](https://openjdk.java.net/install/index.html)
 - [Okta CLI](https://cli.okta.com)
 - [Docker](https://docs.docker.com/engine/install/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
@@ -36,16 +36,10 @@ okta apps create jhipster
 
 You will be prompted to select the following options:
 
-- Application name: gateway
-- Redirect URI: Default
-- Post Logout Redirect URI: Default
+- Application name: spring-data-elasticsearch
+- Redirect URI: http://localhost:8080/login/oauth2/code/oidc,http://localhost:8081/login/oauth2/code/oidc,http://localhost:8761/login/oauth2/code/oidc
+- Post Logout Redirect URI: http://localhost:8080,http://localhost:8081,http://localhost:8761
 
-Make sure to setup http://localhost:8081/login/oauth2/code/oidc with port 8081 as Redirect URI for blog microservice.
-
-```shell
-cd blog
-okta apps create jhipster
-```
 
 The OktaCLI will create the client application and configure the issuer, clientId and clientSecret in an `.okta.env` file in the application root folder.
 
@@ -57,7 +51,7 @@ In the `blog` and `gateway` root, generate the application container image with 
 ./mvnw -DskipTests -ntp -Pprod verify jib:dockerBuild
 ```
 
-Add the file `docker-compose/central-server-config/blog-prod.yml` with the following content:
+Edit the file `docker-compose/central-server-config/application.yml` and replace the placeholders with the values from `.okta.env`:
 
 ```yml
 spring:
@@ -69,26 +63,9 @@ spring:
             issuer-uri: https://{yourOktaDomain}/oauth2/default
         registration:
           oidc:
-            client-id: {blogClientId}
-            client-secret: {blogClientSecret}
+            client-id: {clientId}
+            client-secret: {clientSecret}
 ```
-
-Replace the placeholders with the values from `.okta.env`. Add also the file `docker-compose/central-server-config/gateway-prod.yml` with the following content, also replacing the placeholders:
-
-```yml
-spring:
-  security:
-    oauth2:
-      client:
-        provider:
-          oidc:
-            issuer-uri: https://{yourOktaDomain}/oauth2/default
-        registration:
-          oidc:
-            client-id: {gatewayClientId}
-            client-secret: {gatewayClientSecret}
-```
-
 
 Go to the docker folder and run the services with Docker Compose:
 
