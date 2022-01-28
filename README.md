@@ -3,10 +3,9 @@
 This repository contains all the code for the Spring Data Elasticsearch tutorial, illustrating the JHipster support for the Elasticsearch engine in Spring Boot applications.
 
 **Prerequisites**:
-- [Java 11+](https://openjdk.java.net/install/index.html)
-- [Okta CLI](https://cli.okta.com)
-- [Docker](https://docs.docker.com/engine/install/)
-- [Docker Compose](https://docs.docker.com/compose/install/)
+- [Java OpenJDK 11](https://jdk.java.net/java-se-ri/11)
+- [Okta CLI 0.9.0](https://cli.okta.com)
+- [Docker 20.10.7](https://docs.docker.com/engine/install/)
 
 ## Getting started
 
