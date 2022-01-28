@@ -6,7 +6,6 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.validation.constraints.*;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
@@ -27,7 +26,6 @@ public class Tag implements Serializable {
     @Field("name")
     private String name;
 
-    @DBRef
     @Field("posts")
     @JsonIgnoreProperties(value = { "blog", "tags" }, allowSetters = true)
     private Set<Post> posts = new HashSet<>();

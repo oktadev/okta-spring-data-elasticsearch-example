@@ -7,7 +7,6 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.validation.constraints.*;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
@@ -34,12 +33,10 @@ public class Post implements Serializable {
     @Field("date")
     private Instant date;
 
-    @DBRef
     @Field("blog")
     @JsonIgnoreProperties(value = { "user" }, allowSetters = true)
     private Blog blog;
 
-    @DBRef
     @Field("tags")
     @JsonIgnoreProperties(value = { "posts" }, allowSetters = true)
     private Set<Tag> tags = new HashSet<>();

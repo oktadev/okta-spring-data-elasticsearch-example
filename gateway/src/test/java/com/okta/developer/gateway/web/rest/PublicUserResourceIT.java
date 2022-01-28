@@ -7,9 +7,9 @@ import com.okta.developer.gateway.IntegrationTest;
 import com.okta.developer.gateway.config.Constants;
 import com.okta.developer.gateway.config.TestSecurityConfiguration;
 import com.okta.developer.gateway.domain.User;
+import com.okta.developer.gateway.repository.EntityManager;
 import com.okta.developer.gateway.repository.UserRepository;
 import com.okta.developer.gateway.security.AuthoritiesConstants;
-import com.okta.developer.gateway.service.EntityManager;
 import com.okta.developer.gateway.service.dto.UserDTO;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -22,7 +22,7 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 /**
  * Integration tests for the {@link UserResource} REST controller.
  */
-@AutoConfigureWebTestClient
+@AutoConfigureWebTestClient(timeout = IntegrationTest.DEFAULT_TIMEOUT)
 @WithMockUser(authorities = AuthoritiesConstants.ADMIN)
 @IntegrationTest
 class PublicUserResourceIT {

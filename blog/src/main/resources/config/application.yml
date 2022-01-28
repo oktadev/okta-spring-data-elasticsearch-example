@@ -110,7 +110,7 @@ management:
             enabled: true
 
 mongock:
-  change-logs-scan-package:
+  migration-scan-package:
     - com.okta.developer.blog.config.dbmigrations
 
 spring:
@@ -133,6 +133,7 @@ spring:
     basename: i18n/messages
   main:
     allow-bean-definition-overriding: true
+    allow-circular-references: true
   task:
     execution:
       thread-name-prefix: blog-task-

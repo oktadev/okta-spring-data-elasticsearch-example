@@ -1,5 +1,11 @@
 {
-  "name": "Tag",
+  "applications": ["gateway", "blog"],
+  "changelogDate": "20220128012956",
+  "clientRootFolder": "blog",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "tag",
   "fields": [
     {
       "fieldName": "name",
@@ -8,27 +14,21 @@
       "fieldValidateRulesMinlength": "2"
     }
   ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "blog",
+  "name": "Tag",
+  "pagination": "pagination",
+  "readOnly": false,
   "relationships": [
     {
-      "relationshipType": "many-to-many",
       "otherEntityName": "post",
       "otherEntityRelationshipName": "tag",
+      "ownerSide": false,
       "relationshipName": "post",
-      "ownerSide": false
+      "relationshipType": "many-to-many"
     }
   ],
-  "entityTableName": "tag",
-  "dto": "no",
-  "pagination": "pagination",
-  "service": "serviceClass",
-  "jpaMetamodelFiltering": false,
-  "fluentMethods": true,
-  "readOnly": false,
-  "embedded": false,
-  "applications": ["gateway", "blog"],
-  "microserviceName": "blog",
   "searchEngine": "elasticsearch",
-  "clientRootFolder": "blog",
-  "databaseType": "sql",
-  "changelogDate": "20220120024106"
+  "service": "serviceClass"
 }

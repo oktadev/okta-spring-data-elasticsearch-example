@@ -54,10 +54,8 @@ spring:
     mongodb:
       uri: mongodb://localhost:27017/?waitQueueMultiple=1000
       database: blog
-    elasticsearch:
-      client:
-        reactive:
-          endpoints: localhost:9200
+  elasticsearch:
+    uris: http://localhost:9200
   thymeleaf:
     cache: true
   sleuth:

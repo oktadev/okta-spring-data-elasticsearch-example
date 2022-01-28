@@ -16,7 +16,7 @@ describe('Post e2e test', () => {
   const postPageUrlPattern = new RegExp('/post(\\?.*)?$');
   const username = Cypress.env('E2E_USERNAME') ?? 'user';
   const password = Cypress.env('E2E_PASSWORD') ?? 'user';
-  const postSample = { title: 'B2C', content: 'Li4vZmFrZS1kYXRhL2Jsb2IvaGlwc3Rlci50eHQ=', date: '2022-01-19T02:45:46.555Z' };
+  const postSample = { title: 'B2C', content: 'Li4vZmFrZS1kYXRhL2Jsb2IvaGlwc3Rlci50eHQ=', date: '2022-01-27T01:34:36.555Z' };
 
   let post: any;
 
@@ -158,7 +158,7 @@ describe('Post e2e test', () => {
         .invoke('val')
         .should('match', new RegExp('../fake-data/blob/hipster.txt'));
 
-      cy.get(`[data-cy="date"]`).type('2022-01-19T04:10').should('have.value', '2022-01-19T04:10');
+      cy.get(`[data-cy="date"]`).type('2022-01-27T02:59').should('have.value', '2022-01-27T02:59');
 
       cy.get(entityCreateSaveButtonSelector).click();
 

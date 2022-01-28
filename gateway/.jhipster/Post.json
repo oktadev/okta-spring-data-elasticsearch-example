@@ -1,5 +1,11 @@
 {
-  "name": "Post",
+  "applications": ["gateway", "blog"],
+  "changelogDate": "20220128012756",
+  "clientRootFolder": "blog",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "post",
   "fields": [
     {
       "fieldName": "title",
@@ -18,35 +24,29 @@
       "fieldValidateRules": ["required"]
     }
   ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "blog",
+  "name": "Post",
+  "pagination": "pagination",
+  "readOnly": false,
   "relationships": [
     {
-      "relationshipType": "many-to-one",
+      "otherEntityField": "name",
       "otherEntityName": "blog",
       "otherEntityRelationshipName": "post",
       "relationshipName": "blog",
-      "otherEntityField": "name"
+      "relationshipType": "many-to-one"
     },
     {
-      "relationshipType": "many-to-many",
+      "otherEntityField": "name",
       "otherEntityName": "tag",
       "otherEntityRelationshipName": "post",
+      "ownerSide": true,
       "relationshipName": "tag",
-      "otherEntityField": "name",
-      "ownerSide": true
+      "relationshipType": "many-to-many"
     }
   ],
-  "entityTableName": "post",
-  "dto": "no",
-  "pagination": "pagination",
-  "service": "serviceClass",
-  "jpaMetamodelFiltering": false,
-  "fluentMethods": true,
-  "readOnly": false,
-  "embedded": false,
-  "applications": ["gateway", "blog"],
-  "microserviceName": "blog",
   "searchEngine": "elasticsearch",
-  "clientRootFolder": "blog",
-  "databaseType": "sql",
-  "changelogDate": "20220120023906"
+  "service": "serviceClass"
 }
