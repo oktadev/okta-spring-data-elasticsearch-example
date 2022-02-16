@@ -41,8 +41,8 @@ okta apps create jhipster
 You will be prompted to select the following options:
 
 - Application name: spring-data-elasticsearch
-- Redirect URI: http://localhost:8080/login/oauth2/code/oidc,http://localhost:8081/login/oauth2/code/oidc,http://localhost:8761/login/oauth2/code/oidc
-- Post Logout Redirect URI: http://localhost:8080,http://localhost:8081,http://localhost:8761
+- Redirect URI: `http://localhost:8080/login/oauth2/code/oidc,http://localhost:8081/login/oauth2/code/oidc,http://localhost:8761/login/oauth2/code/oidc`
+- Post Logout Redirect URI: `http://localhost:8080,http://localhost:8081,http://localhost:8761`
 
 The Okta CLI will create the client application and configure the issuer, client ID and client secret in an `.okta.env` file in the application root folder.
 
